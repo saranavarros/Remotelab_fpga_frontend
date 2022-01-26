@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Area de programação</title>
+        <link rel="stylesheet" href="./css/switchs.css">
+        <link rel="stylesheet" href="./css/modal.css">
+        <link rel="stylesheet" href="./css/docs.css">
+        <link rel="stylesheet" href="./css/codemirror.css">
+        <link rel="stylesheet" href="./css/teste2.css">
+        <link rel="stylesheet" href="./js/toggle.css">
+        <script src="./js/codemirror.js"></script>
+        <script src="./js/matchbrackets.js"></script>
+        <script src="./js/vhdl.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js "></script>
+        <script src="./js/Painel.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+
+</head>
+
+<body>
+	<div id="app"></div>
+	<fieldset>
+        <!--SWITCH 01-->
+		<div class='checkboxGroup'>
+            <div class="group">
+			<label class='checkboxControl'>
+				<input type='checkbox' />
+				<div>ΟΙ</div><b></b>
+				<span class='indicator'></span>
+			</label>
+            </div>
+        <!--SWITCH 02-->
+            <div class="group">
+			<label class='checkboxControl'>
+				<input type='checkbox' />
+				<div>ΟΙ</div><b></b>
+				<span class='indicator'></span>
+			</label>
+            </div>
+        <!--SWITCH 03-->
+            <div class="group">
+                <label class='checkboxControl'>
+                    <input type='checkbox' />
+                    <div>ΟΙ</div><b></b>
+                    <span class='indicator'></span>
+                </label>
+                </div>
+        <!--SWITCH 04-->
+            <div class="group">
+                <label class='checkboxControl'>
+                    <input type='checkbox' />
+                    <div>ΟΙ</div><b></b>
+                    <span class='indicator'></span>
+                </label>
+                </div>
+        <!--SWITCH 05-->    
+                <div class="group">
+                    <label class='checkboxControl'>
+                   <input type='checkbox' />
+                   <div>ΟΙ</div><b></b>
+                    <span class='indicator'></span>
+                   </label>
+                    </div> 
+        <!--SWITCH 06-->
+                <div class="group">
+                    <label class='checkboxControl'>
+                    <input type='checkbox' />
+                    <div>ΟΙ</div><b></b>
+                    <span class='indicator'></span>
+                    </label>
+                </div>
+        <!--SWITCH 07-->
+                <div class="group">
+                    <label class='checkboxControl'>
+                    <input type='checkbox' />
+                    <div>ΟΙ</div><b></b>
+                    <span class='indicator'></span>
+                    </label>
+                </div>
+        <!--SWITCH 08-->
+                <div class="group">
+                    <label class='checkboxControl'>
+                        <input type='checkbox' />
+                        <div>ΟΙ</div><b></b>
+                        <span class='indicator'></span>
+                        </label>
+                        </div> 
+        <!--SWITCH 09-->
+                <div class="group">
+                    <label class='checkboxControl'>
+                        <input type='checkbox' />
+                        <div>ΟΙ</div><b></b>
+                        <span class='indicator'></span>
+                        </label>
+                        </div> 
+
+		</div>
+
+	</fieldset>
+
+
+    <div class="prog">
+        <article>
+            <h2>Programação VHDL</h2>
+        
+            <div><textarea id="code" name="code">
+            LIBRARY ieee;
+            USE ieee.std_logic_1164.ALL;
+            USE ieee.numeric_std.ALL;
+        
+            ENTITY tb IS
+            END tb;
+        
+            ARCHITECTURE behavior OF tb IS
+                --Inputs
+                signal a : unsigned(2 downto 0) := (others => '0');
+                signal b : unsigned(2 downto 0) := (others => '0');
+                --Outputs
+                signal a_eq_b : std_logic;
+                signal a_le_b : std_logic;
+                signal a_gt_b : std_logic;
+        
+                signal i,j : integer;
+        
+            BEGIN
+        
+                -- Instantiate the Unit Under Test (UUT)
+                uut: entity work.comparator PORT MAP (
+                        a => a,
+                        b => b,
+                        a_eq_b => a_eq_b,
+                        a_le_b => a_le_b,
+                        a_gt_b => a_gt_b
+                    );
+        
+                -- Stimulus process
+                stim_proc: process
+                begin
+                    for i in 0 to 8 loop
+                        for j in 0 to 8 loop
+                            a <= to_unsigned(i,3); --integer to unsigned type conversion
+                            b <= to_unsigned(j,3);
+                            wait for 10 ns;
+                        end loop;
+                    end loop;
+                end process;
+        
+            END;
+            </textarea></div>
+        
+        
+            <script>
+            var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                lineNumbers: true,
+                matchBrackets: true,
+                mode: {
+                name: "vhdl",
+                }
+            });
+            </script>
+        </article>
+        </div> 
+    </div>
+	
+	<script src="src/index.js">
+	</script>
+
+
+    <script src="./js/teste.js"></script>
+</body>
+
+</html>

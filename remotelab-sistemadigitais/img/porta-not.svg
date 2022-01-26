@@ -1,0 +1,8 @@
+<svg width="769" height="604" viewBox="0 0 769 604" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="769" height="604" fill="white"/>
+<line x1="97" y1="241.5" x2="249" y2="241.5" stroke="black" stroke-width="17"/>
+<line x1="245.5" y1="48" x2="245.5" y2="426" stroke="black" stroke-width="17"/>
+<line x1="240.933" y1="52.4648" x2="604.933" y2="242.465" stroke="black" stroke-width="17"/>
+<line x1="245.199" y1="418.397" x2="597.199" y2="242.397" stroke="black" stroke-width="17"/>
+<path d="M674 237.5C674 253.913 659.231 268 640 268C620.769 268 606 253.913 606 237.5C606 221.087 620.769 207 640 207C659.231 207 674 221.087 674 237.5Z" fill="white" stroke="black" stroke-width="10"/>
+</svg>
